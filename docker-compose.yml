@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  api-db:
+    image: postgres
+    ports:
+      - "5433:5432"
+  api:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8501
+    volumes:
+      - .:/code
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api-db
