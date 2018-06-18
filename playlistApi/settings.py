@@ -74,6 +74,11 @@ DATABASES = {
     }
 }
 
+SPOTIFY_CLIENT_ID = ''
+SPOTIFY_CLIENT_SECRET = ''
+SPOTIFY_CALLBACK = 'http://localhost:8500/callback'
+SPOTIFY_SCOPE = ["streaming", "user-read-birthdate", "user-read-email", "user-read-private"]
+
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
